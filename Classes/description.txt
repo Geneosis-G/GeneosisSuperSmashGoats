@@ -1,0 +1,65 @@
+More % = more knockback.
+
+Make your unique custom character by combining any other mutator... And join the battle with your freinds, or alone against random bots!
+
+[b]Any question or problem to use this mod? [url=http://steamcommunity.com/sharedfiles/filedetails/?id=314929396]Click here to read the FAQ.[/url][/b]
+
+[b]FEATURES[/b]
+- Super Smash Goats: Everyone gets % when they take damages.
+- Super Smash Arena: Create a fighting arena for stock or time battles.
+
+[b]COMMANS[/b]
+[h1]Super Smash Arena[/h1]
+- [b][1]:[/b] Hold 5s to create a small arena.
+- [b][2]:[/b] Hold 5s to create a medium arena.
+- [b][3]:[/b] Hold 5s to create a large arena.
+- [b][4]:[/b] Hold 5s to create a custom arena (small by default).
+- [b][5]:[/b] Switch battle mode (Stock/Time).
+- [b][1] + [2] + [3]:[/b] Hold 5s during battle to cancel the fight.
+
+[b]CHARACTERISTICS[/b]
+[h1]Super Smash Goats[/h1]
+- Every time a creature takes damages it gets more %.
+- Knockback is increased proportionally to the % amount.
+- A creature can have a maximum of 999%.
+- When a creature reach a too high speed, it will respawn (% reset to 0).
+
+[h1]Super Smash Arena[/h1]
+- When you create an arena, the arena is centered on the position of player 1.
+- When an arena is created, all players using Super Smash Arena will join the battle.
+- If the Bots count is positive, nearby NPCs will join the fight as bots.
+- A battle can have a maximum of 8 fighters.
+- Players and NPC not participating in the fight will be teleported outside the arena.
+- When a fighter pass the limit of the arena, he will respawn inside.
+- [h1]Stock mode:[/h1]
+-- Every fighter start with the same number of lives.
+-- When a fighter respawn, he loses 1 life.
+-- A fighter lose the match when he reaches 0 lives.
+- [h1]Time mode:[/h1]
+-- Every fighter start with 0 points.
+-- When a fighter respawn, he loses 1 point.
+-- If a fighter pushed another out of the limit, he wins 1 point;
+-- The match ends when the chrono is over.
+- You can use the following console commands to change the battle settings:
+-- SSGStock newStock => Set the starting stock to newStock (min 1).
+-- SSGTime newTimeMin => Set the chrono time to newTimeMin minutes (min 1).
+-- SSGArenaSize newArenaSize => Set the radius of the custom arena to newArenaSize
+(min 1000, small=2500, medium=5000, large=10000).
+-- SSGBots newBotsCount => Set the number of bots to newBotsCount (min 0).
+
+[b]EASTER EGGS[/b]
+- [spoiler][/spoiler]
+- [spoiler]The "speed limit respawn" is disabled during battles (lose a life battle with 2 bots to remove the limit).[/spoiler]
+
+[b]KNOWN BUGS[/b]
+- The knockback effect may not work if you are walking on the creature you attack.
+- The knockback effect do not work when a player attack another player ragdolled.
+- NPCs participating in fights can have weird behaviours when they respawn.
+
+[b]DEV NOTES[/b]
+[quote=About this mod]Well, I thought the previous mod took a lot of time... I was wrong, this one was even worst XD Anyway I'm glad it's finally complete and I hope you'll have fun with it :)
+The idea of this mod is a bit obvious, I simply tried to recreate the % mechanism of the SSB games. After making the Hero Goat, I had a good idea on how to display some information on the screen, and the RPGoat gave me an easy way to detect the damages taken by the goat... So all I had to do was to extend the damage detection and display to any creature :p
+Then I had to implement the knockback effect. This was a bit tricky because the damage count is partially based on the acceleration of the goat, so when I tried to do it the first result was a knockback giving more % giving more knockback giving an infinite speed to the creature after only one hit XD After trying many possible solution I found one to fix that problem: basically I only apply the knockback effect once per acceleration, which means that as long as the goat is going faster it will not trigger the knockback effect, so no infinite loop.
+At this point, I my first idea for this mod was done... But it felt like somthing was missing. What is a SSB game if you can't actually fight to throw your opponents out of the game? So I decided to create an arena system to allow players to fight in a restricted area :)
+Nothing special to say about this part :p Detecting which fighter pushed another one out of the arena was a bit tricky, but for the rest that's just counting points and displaying some information ^^
+[/quote]
